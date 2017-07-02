@@ -33,7 +33,7 @@ public class Tutorial implements IXposedHookLoadPackage {
                     Date date = dateFormat.parse(text);
                     calendar.setTime(date);
                     calendar.add(Calendar.HOUR, -2);
-                    text = text + " / " + dateFormat.format(calendar.getTime());
+                    text = dateFormat.format(calendar.getTime()) + " / " + text;
                 } catch (Exception e) {
                     tv.setTextColor(Color.RED);
                 }
